@@ -170,6 +170,29 @@ All data is stored in Docker volumes:
 
 These volumes persist even when containers are stopped or removed.
 
+## Advanced Configuration
+
+### Production Deployment Customization
+
+For production deployments, you can use `docker-compose.override.yml` to customize the deployment without modifying the base configuration:
+
+```bash
+cp docker-compose.override.yml.example docker-compose.override.yml
+# Edit docker-compose.override.yml with your production settings
+docker compose up -d
+```
+
+The override file allows you to:
+- Increase resource limits (CPU, memory)
+- Add health checks
+- Configure additional ports
+- Use bind mounts instead of volumes
+- Tune Graylog performance settings
+
+Docker Compose automatically merges the base and override files.
+
+These volumes persist even when containers are stopped or removed.
+
 ## Troubleshooting
 
 ### Elasticsearch won't start
