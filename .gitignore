@@ -1,0 +1,17 @@
+# Environment variables
+.env
+
+# Docker override (keep the .example file)
+docker-compose.override.yml
+
+# Docker volumes
+mongodb_data/
+elasticsearch_data/
+graylog_data/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
